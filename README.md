@@ -1,8 +1,8 @@
 ---
 title: Object Detection ECS
-emoji: 🖼
-colorFrom: green
-colorTo: purple
+emoji: 🌖
+colorFrom: purple
+colorTo: green
 sdk: gradio
 sdk_version: 5.5.0
 app_file: app.py
@@ -10,7 +10,7 @@ pinned: false
 short_description: Object detection ECS
 ---
 
-# Object detection - ECS 
+# Object detection via ECS endpoints
 
 <b>Aim: AI-driven object detection task</b>
  - Front-end: user interface via Gradio library
