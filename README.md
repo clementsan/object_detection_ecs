@@ -14,10 +14,29 @@ short_description: Object detection ECS
 
 <b>Aim: AI-driven object detection task</b>
  - Front-end: user interface via Gradio library
- - Back-end: use of ECS endpoints to run ML models
+ - Back-end: use of AWS ECS endpoints to run Machine Learning models
 
+Menu:
+- [Front-end user interface](#1-front-end-user-interface)
+  - [Environment variables](#11-environment-variables)
+  - [Local execution](#12-local-execution)
+  - [Deployment on Hugging Face](#13-deployment-on-hugging-face)
+- [Back-end Machine Learning models](#2-back-end-machine-learning-models)
+  - [Information on ML models](#21-information-on-ml-models)
+  - [Deployment on AWS ECS](#22-information-on-aws-ecs-deployment)
 
-## Front-end user interface
+## 1. Front-end user interface
+
+### 1.1. Environment variables
+
+This web app uses two environment variables, corresponding to the endpoints for the deployed machine learning models
+(cf. [Section 2 - Back-end ML models](#2-back-end-ml-models))
+
+Environment variables:
+ - AWS_DETR_URL: endpoint for DETR model
+ - AWS_YOLOS_URL: endpoint for YOLOS model
+
+### 1.2. Local execution
 Use of Gradio library for web interface
 
 Command line:
@@ -25,18 +44,32 @@ Command line:
 
 <b>Note:</b> The Gradio app should now be accessible at http://localhost:7860
 
+### 1.3. Deployment on Hugging Face
 
-## Back-end ML models
+This web application has been deployed on Hugging Face. 
 
-Machine Learning (ML) models are available on Docker Hub and have been deployed on AWS ECS
+HF Space URL: https://huggingface.co/spaces/cvachet/object_detection_ecs
+
+
+## 2. Back-end machine learning models
+
+Machine Learning (ML) models are available on Docker Hub and have been deployed to AWS ECS (Elastic Container Service)
+
+### 2.1. Information on ML models
+**Github repos:**
+ - DETR API: https://github.com/clementsan/object_detection_detr_api
+ - YOLOS API: https://github.com/clementsan/object_detection_yolos_api
 
 **Docker hub containers:**
- - DETR model: https://hub.docker.com/r/cvachet/object-detection-detr-api
- - YOLOS model: https://hub.docker.com/r/cvachet/object-detection-yolos-api
+ - DETR API: https://hub.docker.com/r/cvachet/object-detection-detr-api
+ - YOLOS API: https://hub.docker.com/r/cvachet/object-detection-yolos-api
 
-## AWS ECS deployment steps: 
+### 2.2 Information on AWS ECS deployment
 
 ECS: Elastic Container Service
+
+<details>
+
 Steps after docker images are available on Docker Hub
 
 ### Step 1. Create a new ECS task definition
@@ -68,3 +101,5 @@ Steps after docker images are available on Docker Hub
  - Go to Cluster -> service -> task -> configuration and networking
  - Click on ```Security Group```
  - Adjust rules for inbound traffic (e.g. traffic only from my_ip)
+
+</details>
