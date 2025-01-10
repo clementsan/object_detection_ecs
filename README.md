@@ -12,11 +12,18 @@ short_description: Object detection ECS
 
 # Object detection via ECS endpoints
 
-<b>Aim: AI-driven object detection task</b>
+[![](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/cvachet/object-detection-ecs)](https://hub.docker.com/repository/docker/cvachet/object-detection-ecs)
+
+![example workflow](https://github.com/clementsan/object_detection_ecs/actions/workflows/publish_docker_image.yml/badge.svg)
+![example workflow](https://github.com/clementsan/object_detection_ecs/actions/workflows/sync_HFSpace.yml/badge.svg)
+
+**Aim: AI-driven object detection task**
  - Front-end: user interface via Gradio library
  - Back-end: use of AWS ECS endpoints to run Machine Learning models
 
-Menu:
+----
+**Table of contents:**
 - [Front-end user interface](#1-front-end-user-interface)
   - [Environment variables](#11-environment-variables)
   - [Local execution](#12-local-execution)
@@ -24,6 +31,7 @@ Menu:
 - [Back-end Machine Learning models](#2-back-end-machine-learning-models)
   - [Information on ML models](#21-information-on-ml-models)
   - [Deployment on AWS ECS](#22-information-on-aws-ecs-deployment)
+----
 
 ## 1. Front-end user interface
 
