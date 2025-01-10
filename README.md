@@ -27,10 +27,11 @@ short_description: Object detection ECS
 - [Front-end user interface](#1-front-end-user-interface)
   - [Environment variables](#11-environment-variables)
   - [Local execution](#12-local-execution)
-  - [Deployment on Hugging Face](#13-deployment-on-hugging-face)
 - [Back-end Machine Learning models](#2-back-end-machine-learning-models)
   - [Information on ML models](#21-information-on-ml-models)
   - [Deployment on AWS ECS](#22-information-on-aws-ecs-deployment)
+- [Deployment on Hugging Face](#3-deployment-on-hugging-face)
+- [Deployment on Docker Hub](#4-deployment-on-docker-hub)
 ----
 
 ## 1. Front-end user interface
@@ -52,11 +53,6 @@ Command line:
 
 <b>Note:</b> The Gradio app should now be accessible at http://localhost:7860
 
-### 1.3. Deployment on Hugging Face
-
-This web application has been deployed on Hugging Face. 
-
-HF Space URL: https://huggingface.co/spaces/cvachet/object_detection_ecs
 
 
 ## 2. Back-end machine learning models
@@ -111,3 +107,17 @@ Steps after docker images are available on Docker Hub
  - Adjust rules for inbound traffic (e.g. traffic only from my_ip)
 
 </details>
+
+
+### 3. Deployment on Hugging Face
+
+This web application has been deployed on Hugging Face. 
+
+HF Space URL: https://huggingface.co/spaces/cvachet/object_detection_ecs
+
+
+### 4. Deployment on Docker Hub
+
+This web application has been deployed on Docker Hub. 
+
+URL: https://hub.docker.com/r/cvachet/object-detection-ecs
