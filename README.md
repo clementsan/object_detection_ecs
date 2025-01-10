@@ -51,7 +51,7 @@ Use of Gradio library for web interface
 Command line:
 > python3 app.py
 
-<b>Note:</b> The Gradio app should now be accessible at http://localhost:7860
+**Note:** The Gradio app should now be accessible at http://localhost:7860
 
 
 
